@@ -67,8 +67,8 @@ Well, these are the sample screenshots of the project to help you get a feel for
 
 ### Links
 
-- Solution URL: [This link is coming soon once the solution is submitted.](https://your-solution-url.com)
-- Live Site URL: [This link is coming soon once the solution is hosted live.](https://your-live-site-url.com)
+- Solution URL: [Frontendmentor.](https://www.frontendmentor.io/solutions/sneakerz-card-e-commerce-product-QF4DY3XWZQ)
+- Live Site URL: [Live Site.](https://sneakerzcard.wizzoviz.dev/)
 
 ## My process
 
