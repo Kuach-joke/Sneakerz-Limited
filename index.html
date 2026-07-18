@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneakers Fall Limited Edition</title>
+    <link rel="icon" href="images/favicon-32x32.png" alt="Frontend-icon" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Mobile menu overlay -->
+    <div class="overlay" data-overlay></div>
+
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__left">
+          <button
+            class="icon-btn menu-btn"
+            data-menu-open
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="icon icon--menu"></span>
+          </button>
+          <a href="#" class="logo">
+            <img src="images/logo.svg" alt="Sneakers company logo" />
+          </a>
+        </div>
+
+        <nav class="nav" data-nav>
+          <button
+            class="icon-btn close-btn"
+            data-menu-close
+            aria-label="Close menu"
+          >
+            <span class="icon icon--close"></span>
+          </button>
+          <ul class="nav__list" data-nav-list>
+            <li><a href="#" data-nav-link>Collections</a></li>
+            <li><a href="#" data-nav-link>Men</a></li>
+            <li><a href="#" data-nav-link>Women</a></li>
+            <li><a href="#" data-nav-link>About</a></li>
+            <li><a href="#" data-nav-link>Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__right">
+          <button
+            class="icon-btn cart-btn"
+            data-cart-toggle
+            aria-label="Toggle cart"
+          >
+            <span class="icon icon--cart"></span>
+            <span class="cart-count" data-cart-count hidden>0</span>
+          </button>
+
+          <div class="cart" data-cart hidden>
+            <div class="cart__header">Cart</div>
+            <hr />
+            <div class="cart__body" data-cart-body>
+              <p class="cart__empty">Your cart is empty.</p>
+            </div>
+          </div>
+
+          <button class="avatar-btn" aria-label="Account">
+            <img src="images/image-avatar.png" alt="User avatar" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="product">
+      <section class="gallery">
+        <div class="gallery__main" data-gallery-main>
+          <img
+            src="images/image-product-1.jpg"
+            alt="Fall Limited Edition Sneakers, main view"
+            data-main-image
+          />
+          <button
+            class="gallery__arrow gallery__arrow--prev"
+            data-gallery-prev
+            aria-label="Previous image"
+          >
+            <img src="images/icon-previous.svg" alt="" />
+          </button>
+          <button
+            class="gallery__arrow gallery__arrow--next"
+            data-gallery-next
+            aria-label="Next image"
+          >
+            <img src="images/icon-next.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="gallery__thumbs">
+          <button class="thumb is-active" data-thumb data-index="0">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="View 1 of Fall Limited Edition Sneakers"
+            />
+          </button>
+          <button class="thumb" data-thumb data-index="1">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="View 2 of Fall Limited Edition Sneakers"
+            />
+          </button>
+          <button class="thumb" data-thumb data-index="2">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="View 3 of Fall Limited Edition Sneakers"
+            />
+          </button>
+          <button class="thumb" data-thumb data-index="3">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="View 4 of Fall Limited Edition Sneakers"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section class="details">
+        <p class="details__eyebrow">Sneaker Company</p>
+        <h1 class="details__title">Fall Limited Edition Sneakers</h1>
+        <p class="details__desc">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand
+          everything the weather can offer.
+        </p>
+
+        <div class="details__price">
+          <div class="details__price-row">
+            <span class="details__price-current">$125.00</span>
+            <span class="details__discount">50%</span>
+          </div>
+          <span class="details__price-original">$250.00</span>
+        </div>
+
+        <div class="details__actions">
+          <div class="quantity" data-quantity>
+            <button
+              class="quantity__btn"
+              data-qty-minus
+              aria-label="Decrease quantity"
+            >
+              <span class="icon icon--minus"></span>
+            </button>
+            <span class="quantity__value" data-qty-value>0</span>
+            <button
+              class="quantity__btn"
+              data-qty-plus
+              aria-label="Increase quantity"
+            >
+              <span class="icon icon--plus"></span>
+            </button>
+          </div>
+
+          <button class="btn-add" data-add-to-cart>
+            <span class="icon icon--cart icon--cart-light btn-add__icon"></span>
+            Add to cart
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox gallery (desktop/tablet) -->
+    <div class="lightbox" data-lightbox hidden>
+      <div class="lightbox__backdrop" data-lightbox-close></div>
+      <div class="lightbox__content">
+        <button
+          class="icon-btn lightbox__close"
+          data-lightbox-close
+          aria-label="Close gallery"
+        >
+          <span class="icon icon--close icon--close-light"></span>
+        </button>
+        <div class="lightbox__main">
+          <img
+            src="images/image-product-1.jpg"
+            alt="Fall Limited Edition Sneakers, enlarged view"
+            data-lightbox-image
+          />
+          <button
+            class="gallery__arrow gallery__arrow--prev"
+            data-lightbox-prev
+            aria-label="Previous image"
+          >
+            <img src="images/icon-previous.svg" alt="" />
+          </button>
+          <button
+            class="gallery__arrow gallery__arrow--next"
+            data-lightbox-next
+            aria-label="Next image"
+          >
+            <img src="images/icon-next.svg" alt="" />
+          </button>
+        </div>
+        <div class="lightbox__thumbs">
+          <button class="thumb is-active" data-lightbox-thumb data-index="0">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="View 1 of Fall Limited Edition Sneakers"
+            />
+          </button>
+          <button class="thumb" data-lightbox-thumb data-index="1">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="View 2 of Fall Limited Edition Sneakers"
+            />
+          </button>
+          <button class="thumb" data-lightbox-thumb data-index="2">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="View 3 of Fall Limited Edition Sneakers"
+            />
+          </button>
+          <button class="thumb" data-lightbox-thumb data-index="3">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="View 4 of Fall Limited Edition Sneakers"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://wizzoviz.tech/">Joke wizzo🦅</a>.
+    </footer>
+  </body>
+</html>
